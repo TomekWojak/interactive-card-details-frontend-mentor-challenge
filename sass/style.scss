@@ -1,0 +1,26 @@
+* {
+	margin: 0;
+	bottom: 0;
+	box-sizing: border-box;
+}
+picture,
+img {
+	display: block;
+	max-width: 100%;
+	width: 100%;
+	font-style: italic;
+}
+:root {
+	--pureWhite: hsl(0, 100%, 100%);
+	--darkerWhite: hsl(270, 3%, 87%);
+	--gray: hsl(212, 12%, 71%);
+	--darkPurple: hsl(278, 68%, 11%);
+	--accentGradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+	--error: hsl(0, 100%, 66%);
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: "Space Grotesk", sans-serif;
+}

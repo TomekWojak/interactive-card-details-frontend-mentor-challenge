@@ -14,6 +14,70 @@
 </head>
 
 <body>
+  <div class="body-bg"></div>
+  <header class="header">
+    <div class="header__content wrapper">
+      <div class="header__card header__card--back">
+        <img width="447" height="245" src="/images/bg-card-back.png" alt="Credit card back view">
+        <span class="header__cvc">000</span>
+      </div>
+      <div class="header__card header__card--front">
+        <img width="447" height="245" src="./images/bg-card-front.png" alt="Credit card front view">
+        <div class="header__card-data">
+          <p class="header__number">0000 0000 0000 0000</p>
+          <div class="header__card-data-bottom">
+            <p class="header__name">Jane Appleseed</p>
+            <p class="header__date">00/00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="card-info-section">
+      <form class="card-info-section__form wrapper">
+        <div class="card-info-section__box">
+          <label for="name" class="card-info-section__title">Cardholder name</label>
+          <div class="input-box">
+            <input type="text" id="name" placeholder="e.g. Jane Applesed">
+            <div class="input-border"></div>
+          </div>
+          <p class="card-info-section-error">error</p>
+        </div>
+        <div class="card-info-section__box">
+          <label for="number" class="card-info-section__title">card number</label>
+          <div class="input-box">
+            <input type="number" id="number" placeholder="e.g. 1234 5678 9123 000">
+            <div class="input-border"></div>
+          </div>
+          <p class="card-info-section-error">error</p>
+        </div>
+        <div class="card-info-section__container">
+          <div class="card-info-section__box">
+            <p class="card-info-section__title">Exp. Date (MM/YY)</p>
+            <div class="input-box input-box-mm">
+              <input type="number" data-id="date" placeholder="MM">
+              <div class="input-border"></div>
+            </div>
+            <div class="input-box input-box-yy">
+              <input type="number" data-id="date" placeholder="YY">
+              <div class="input-border"></div>
+            </div>
+            <p class="card-info-section-error">error</p>
+          </div>
+          <div class="card-info-section__box">
+            <label class="card-info-section__title" for="cvc">CVC</label>
+            <div class="input-box">
+              <input id="cvc" type="number" placeholder="e.g. 123">
+              <div class="input-border"></div>
+            </div>
+            <p class="card-info-section-error">error</p>
+          </div>
+        </div>
+        <button type="submit" class="card-info-section__btn">Confirm</button>
+      </form>
+    </section>
+  </main>
   <!-- 
   0000 0000 0000 0000
   Jane Appleseed
@@ -41,7 +105,7 @@
   We've added your card details
   Continue
    -->
-  Challenge by Frontend Mentor - https://www.frontendmentor.io?ref=challenge"
+  <!-- Challenge by Frontend Mentor - https://www.frontendmentor.io?ref=challenge" -->
 </body>
 
 </html>

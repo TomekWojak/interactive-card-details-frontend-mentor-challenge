@@ -137,6 +137,9 @@ body {
   flex-direction: column;
   padding: 2em;
 }
+.card-info-section__form.hidden {
+  display: none;
+}
 .card-info-section input {
   padding: 0.8em 1em;
   font-family: inherit;
@@ -147,11 +150,11 @@ body {
   outline: none;
 }
 .card-info-section input::-moz-placeholder {
-  color: var(--gray);
+  color: var(--darkerWhite);
   font-weight: 500;
 }
 .card-info-section input::placeholder {
-  color: var(--gray);
+  color: var(--darkerWhite);
   font-weight: 500;
 }
 .card-info-section input:focus, .card-info-section input:focus-visible {
@@ -200,8 +203,8 @@ body {
   font-weight: 500;
 }
 .card-info-section-error {
-  margin-block-start: 0.5em;
-  font-size: var(--smallCardTxt);
+  margin: 0.5em 0 1em;
+  font-size: clamp(1rem, 3vw, 1.1rem);
   color: var(--error);
   font-weight: 500;
   visibility: hidden;
@@ -226,6 +229,7 @@ body {
   font-size: clamp(1.5rem, 3vw, 1.7rem);
   cursor: pointer;
   transition: background 0.3s, color 0.3s, border 0.3s;
+  margin-block-start: 1em;
 }
 .card-info-section__btn:hover {
   background: none;
@@ -233,8 +237,54 @@ body {
   border: 2px solid var(--darkPurple);
 }
 
-.card-info-section__box.error input {
+input.error {
   border: 1px solid var(--error);
+}
+
+.thanks-box {
+  display: none;
+  padding: 4em 2em;
+  flex-direction: column;
+  align-items: center;
+}
+.thanks-box.active {
+  display: flex;
+}
+.thanks-box__img {
+  width: 70px;
+  height: auto;
+}
+.thanks-box__title {
+  margin: 1.2em 0 0.5em;
+  letter-spacing: 2px;
+  font-size: clamp(2.6rem, 5vw, 2.8rem);
+  color: var(--darkPurple);
+  font-weight: 500;
+}
+.thanks-box__text {
+  color: var(--gray);
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+}
+.thanks-box__btn {
+  margin: 3em auto 0;
+  max-width: 600px;
+  padding: 1em 2em;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--darkPurple);
+  color: var(--pureWhite);
+  font-weight: 500;
+  font-family: inherit;
+  letter-spacing: 1px;
+  border: 2px solid transparent;
+  font-size: clamp(1.5rem, 3vw, 1.7rem);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+}
+.thanks-box__btn:hover {
+  background: none;
+  color: var(--darkPurple);
+  border: 2px solid var(--darkPurple);
 }
 
 @media (400px <= width) {
@@ -265,13 +315,16 @@ body {
   .card-info-section__box:last-child {
     width: 55%;
   }
+  .thanks-box__img {
+    width: 90px;
+  }
 }
 @media (900px <= width) {
   .body-bg {
     inset-inline: initial;
     left: 0;
     width: 35%;
-    height: 100vh;
+    height: 100dvh;
     background-image: url("../images/bg-main-desktop.png");
   }
   body {
@@ -343,6 +396,15 @@ body {
   .card-info-section__box:last-child {
     width: 48%;
   }
+  .thanks-box {
+    width: 350px;
+  }
+  .thanks-box__btn {
+    max-width: none;
+  }
+  .thanks-box__img {
+    width: 80px;
+  }
 }
 @media (992px <= width) {
   .header__card--front {
@@ -377,5 +439,8 @@ body {
   }
   .card-info-section .card-info-section__box:last-child {
     width: 55%;
+  }
+  .thanks-box {
+    width: 400px;
   }
 }/*# sourceMappingURL=style.css.map */

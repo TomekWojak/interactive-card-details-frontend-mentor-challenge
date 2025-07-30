@@ -23,7 +23,7 @@ const handleForm = (e) => {
 
 	checkIfEmpty(allInputs);
 	checkLength(nameInput, 3);
-	checkLength(numberInput, 19);
+	checkLength(numberInput, 16);
 	checkIfCorrect(
 		nameInput,
 		nameRegexp,
